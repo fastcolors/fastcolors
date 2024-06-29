@@ -199,13 +199,113 @@
                 <div class="silex-element-content normal">
                     <div style="text-align: center;"><span style="color: rgb(255, 255, 255);">Home</span></div>
                 </div>
-            </a><a data-silex-type="text-element" class="editable-style text-element silex-id-1496149356935-6 page-link-active" data-silex-id="silex-id-1496149356935-6" href="#!page-storia" style="">
+            </a><a data-silex-type="text-element" class="editable-style text-element silex-id-1496149356935-6" data-silex-id="silex-id-1496149356935-6" href="#!page-storia" style="">
                 <div class="silex-element-content normal">
                     Storia</div>
             </a><a data-silex-type="text-element" class="editable-style text-element silex-id-1496149361299-7" data-silex-id="silex-id-1496149361299-7" href="#!page-about" style="">
                 <div class="silex-element-content normal">Dove Siamo </div>
             </a></div>
-    </nav><section data-silex-type="container-element" class="container-element editable-style silex-id-1474394621033-3 section-element prevent-resizable page-home-page paged-element" data-silex-id="silex-id-1474394621033-3">
+    </nav><footer data-silex-type="container-element" class="container-element editable-style silex-id-1478366450713-3 section-element prevent-resizable" data-silex-id="silex-id-1478366450713-3" style="">
+        <div data-silex-type="container-element" class="editable-style silex-element-content silex-id-1478366450713-2 container-element website-width from-bottom" data-silex-id="silex-id-1478366450713-2" style="">
+
+
+
+            
+            
+            
+            
+            
+        <div data-silex-type="image-element" class="editable-style image-element silex-id-1719653805492-1 page-storia paged-element open-btn" data-silex-id="silex-id-1719653805492-1" style=""><img src="hamburger.png"></div><div data-silex-type="html-element" class="editable-style html-element silex-id-1719653997302-0 page-dove paged-element silex-component-map silex-use-height-not-minheight silex-element-content-full-height" data-silex-id="silex-id-1719653997302-0"><div class="silex-element-content"><div id="mapdiv_1719654980544_647" class="map"></div>
+<style>#mapdiv_1719654980544_647 {width: 100%; height: 100%;}</style>
+<script>
+
+
+function init_1719654980544_647() {
+    if(typeof(ol) === 'undefined') {
+        // console.warn('Map not ready, restart later')
+        // wait for dependencies to be loaded
+        setTimeout(init_1719654980544_647, 1000);
+        return;
+    }
+
+    // empty the div before adding the map again
+    $('#mapdiv_1719654980544_647').empty();
+
+    // apply position and zoom
+    // from map URL http://www.openstreetmap.org/#map=18/48.88680/2.34235&layers=C
+    // var params = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1119.147441704632!2d8.879915548445217!3d45.54767626734082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786f3264110b0c3%3A0x7e2d6de2b37f182!2sFastcolors+Studio!5e0!3m2!1sit!2sit!4v1509401627582'.match(/.*map=([0-9]*)\/(.*)\/(.*)&layers=(.)/);
+    var params = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1119.147441704632!2d8.879915548445217!3d45.54767626734082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786f3264110b0c3%3A0x7e2d6de2b37f182!2sFastcolors+Studio!5e0!3m2!1sit!2sit!4v1509401627582'.match(/.*map=([0-9]*)\/(.*)\/(.*)/);
+    if(params) {
+        var zoom = parseFloat(params[1]);
+        var lat = parseFloat(params[2]);
+        var lon = parseFloat(params[3]);
+        // var layer = params[4] || 'S';
+        var center = ol.proj.fromLonLat([lon, lat]);
+        var map = new ol.Map({
+          layers: [
+            new ol.layer.Tile({
+              source: new ol.source.OSM()
+            })
+          ],
+          target: 'mapdiv_1719654980544_647',
+          view: new ol.View({
+            center: center,
+            zoom: zoom
+          })
+        });
+        
+    }
+}
+init_1719654980544_647();
+// $(document).on('silex.resize', function() {
+//     $('#mapdiv_1719654980544_647').empty();
+//     init_1719654980544_647();
+// });
+
+</script>
+</div></div><a data-silex-type="text-element" class="editable-style text-element silex-id-1496168656864-38" data-silex-id="silex-id-1496168656864-38" href="#!page-product-details" style="">
+                <div class="silex-element-content normal">
+                    <div style="text-align: center;">About</div>
+                </div>
+            </a><a data-silex-type="text-element" class="editable-style text-element silex-id-1496168656861-37" data-silex-id="silex-id-1496168656861-37" href="http://www.silexlabs.org" style="">
+                <div class="silex-element-content normal">
+                    <div style="text-align: center;">Blog</div>
+                </div>
+            </a><a data-silex-type="text-element" class="editable-style text-element silex-id-1496168656857-36" data-silex-id="silex-id-1496168656857-36" href="#!page-home-page" style="">
+                <div class="silex-element-content normal">
+                    <div style="text-align: center;">Home</div>
+                </div>
+            </a><div data-silex-type="html-element" class="editable-style html-element silex-component silex-component-share silex-id-1496168764134-41" data-silex-id="silex-id-1496168764134-41" style="">
+                <div class="silex-element-content">
+<ul class="share-buttons" id="id_1719653873606_845">
+  
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com&amp;t=Your%20site%20title" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" data-silex-static="" src="/static/2.7/simplesharingbuttons/simple_icons_black/Facebook.png"></a></li>
+  
+  
+  <li><a href="https://twitter.com/intent/tweet?source=http://yoursite.com&amp;text=Your%20site%20title:%20http://yoursite.com&amp;via=silexlabs" target="_blank" title="Share on Twitter"><img alt="Twitt" data-silex-static="" src="/static/2.7/simplesharingbuttons/simple_icons_black/Twitter.png"></a></li>
+  
+  
+  
+  <li><a href="http://www.tumblr.com/share?v=3&amp;u=http://yoursite.com&amp;t=Your%20site%20title&amp;s=" target="_blank" title="Post to Tumblr"><img alt="Post to Tumblr" data-silex-static="" src="/static/2.7/simplesharingbuttons/simple_icons_black/Tumblr.png"></a></li>
+  
+  
+  <li><a href="http://pinterest.com/pin/create/button/?url=http://yoursite.com&amp;description=Your%20site%20description" target="_blank" title="Pin it"><img alt="Pin it" data-silex-static="" src="/static/2.7/simplesharingbuttons/simple_icons_black/Pinterest.png"></a></li>
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<style>#id_1719653873606_845.share-buttons {list-style: none; padding: 0;}#id_1719653873606_845.share-buttons li {display: inline;}#id_1719653873606_845.share-buttons .sr-only {position: absolute; clip: rect(1px, 1px, 1px, 1px); padding: 0; border: 0; height: 1px; width: 1px; overflow: hidden;}</style>
+</div>
+            </div><div data-silex-type="text-element" class="editable-style text-element silex-id-1719652337978-4 page-storia paged-element" data-silex-id="silex-id-1719652337978-4" style=""><div class="silex-element-content normal"><h1>Fastcolors Studio</h1><p>Carlo Fastcolors ha iniziato la sua carriera artistica nel 1993 nella periferia di Milano, in un'epoca in cui reperire informazioni e materiali per la professione di tatuatore era molto difficile. Dopo un periodo iniziale come autodidatta, durante il quale ha utilizzato per un anno intero una macchinetta per tatuaggi costruita con le proprie mani, Carlo ha incontrato Luigi Stopar, un artista rispettato con cui ha collaborato e gettato le basi per la sua crescita professionale.</p><p>Nel 1996, Carlo Ferrè apre il primo Fastcolors Studio, diventato rapidamente un punto di riferimento per gli appassionati di tatuaggi. Successivamente, nel 1999, Carlo si è trasferito a Madrid per lavorare presso Skin Art, un piccolo tattoo shop della città, e successivamente si è unito alla nota Terror Tattoo Crew. Da allora, ha viaggiato per oltre dieci anni tra Europa e Stati Uniti, visitando le mete più celebri del mondo del tatuaggio occidentale.</p><h3>Fastcolors Studio: La Rinascita nel 2017</h3><p>Nel gennaio 2017, Carlo ha riaperto Fastcolors Studio in una nuova sede, portando con sé tutta la conoscenza e l'esperienza accumulata negli anni. Lo studio è specializzato in stile orientale, ma offre una vasta gamma di stili di tatuaggio, realizzati sia da Carlo sia da artisti invitati specializzati nelle tecniche richieste.</p><h3>Collaborazioni di Prestigio</h3><p>Fastcolors Studio è diventato un punto di riferimento per numerosi artisti di fama internazionale. Tra coloro che sono passati dallo studio si annoverano:</p><ul><li>Henry Lewis</li><li>Vale Lovette</li><li>Lara Scotton</li><li>Rudy De Amicis</li><li>Amos Blackink</li><li>Robert Hernandez</li><li>e molti altri</li></ul><h3>Esperienza e Passione</h3><p>Con un background che affonda le radici nel 1993, Fastcolors Studio rappresenta il frutto di anni di esperienza, dedizione e passione per l'arte del tatuaggio. Accogliendo clienti e collaboratori da tutto il mondo, il nostro studio offre un ambiente dove l'arte prende vita sulla pelle, garantendo professionalità e creatività in ogni opera realizzata. Che tu sia alla ricerca di un tatuaggio in stile orientale o di qualsiasi altro stile, Fastcolors Studio è il luogo perfetto per trasformare le tue idee in realtà.</p><h3>Collaborazioni Passate</h3><p>Carlo ha collaborato con diversi studi di tatuaggio rinomati, tra cui:</p><ul><li>Mao y Cathy</li><li>Vittamin Tattoo</li><li>El Rana Tattoo Shop</li><li>So.Cal. Tattoo &amp; Body Piercings</li><li>Everlasting Tattoo (San Francisco)</li><li>Picture Machine (San Francisco)</li><li>Body Graphics (Reno)</li><li>MacDougal Street Tattoo Co. (Manhattan, New York)</li><li>True Blue Tattoo (Queens, New York)</li><li>East Side Ink (Manhattan, New York)</li><li>Hold Fast (Brooklyn, New York)</li><li>DaVinci Tattoo (Wantagh, New York)</li><li>Kattattoomba (A Coruña)</li><li>Studio Adrenaline (Follonica)</li><li>Psycho Tattoo (Roma)</li><li>La Bottega dei Tatuaggi (Ostia, Lido di Roma)</li><li>Quetzal Tattoo (Milano)</li><li>Indelebile Tattoo (Torre del Greco, NA)</li></ul><p>Fastcolors Studio è il frutto di un percorso professionale che ha portato Carlo a viaggiare e a lavorare con i migliori artisti del settore, per offrire oggi un servizio di altissima qualità ai suoi clienti.</p><br></div></div><div data-silex-id="silex-id-1442914737143-3" class="editable-style silex-id-1442914737143-3 text-element" data-silex-type="text-element" style="">
+                <div class="silex-element-content normal"><a href="//www.silex.me/"></a><p><a href="//www.silex.me/" linktype="LinkTypeExternal">Powered by Silex</a></p><a href="https://wearekllr.com/demos/createev/"></a><a href="https://wearekllr.com/demos/createev/"></a>
+                </div>
+            </div></div>
+    </footer><section data-silex-type="container-element" class="container-element editable-style silex-id-1474394621033-3 section-element prevent-resizable page-home-page paged-element" data-silex-id="silex-id-1474394621033-3">
         <div data-silex-type="container-element" class="editable-style silex-element-content silex-id-1474394621032-2 container-element website-width" data-silex-id="silex-id-1474394621032-2" style="">
 
 
@@ -335,104 +435,4 @@
                         <h3>e-Shop</h3>
                         <p>Abbigliamento e Gadgets </p>
                     </div>
-                </div></a></div></div></section><footer data-silex-type="container-element" class="container-element editable-style silex-id-1478366450713-3 section-element prevent-resizable" data-silex-id="silex-id-1478366450713-3" style="">
-        <div data-silex-type="container-element" class="editable-style silex-element-content silex-id-1478366450713-2 container-element website-width from-bottom" data-silex-id="silex-id-1478366450713-2" style="">
-
-
-
-            
-            
-            
-            
-            
-        <div data-silex-type="image-element" class="editable-style image-element silex-id-1719653805492-1 page-storia paged-element open-btn" data-silex-id="silex-id-1719653805492-1"><img src="hamburger.png"></div><div data-silex-type="html-element" class="editable-style html-element silex-id-1719653997302-0 page-dove paged-element silex-component-map silex-use-height-not-minheight silex-element-content-full-height" data-silex-id="silex-id-1719653997302-0"><div class="silex-element-content"><div id="mapdiv_1719653997331_498" class="map"></div>
-<style>#mapdiv_1719653997331_498 {width: 100%; height: 100%;}</style>
-<script>
-
-
-function init_1719653997331_498() {
-    if(typeof(ol) === 'undefined') {
-        // console.warn('Map not ready, restart later')
-        // wait for dependencies to be loaded
-        setTimeout(init_1719653997331_498, 1000);
-        return;
-    }
-
-    // empty the div before adding the map again
-    $('#mapdiv_1719653997331_498').empty();
-
-    // apply position and zoom
-    // from map URL http://www.openstreetmap.org/#map=18/48.88680/2.34235&layers=C
-    // var params = 'http://www.openstreetmap.org/#map=18/48.87378/2.29489&layers=C'.match(/.*map=([0-9]*)\/(.*)\/(.*)&layers=(.)/);
-    var params = 'http://www.openstreetmap.org/#map=18/48.87378/2.29489&layers=C'.match(/.*map=([0-9]*)\/(.*)\/(.*)/);
-    if(params) {
-        var zoom = parseFloat(params[1]);
-        var lat = parseFloat(params[2]);
-        var lon = parseFloat(params[3]);
-        // var layer = params[4] || 'S';
-        var center = ol.proj.fromLonLat([lon, lat]);
-        var map = new ol.Map({
-          layers: [
-            new ol.layer.Tile({
-              source: new ol.source.OSM()
-            })
-          ],
-          target: 'mapdiv_1719653997331_498',
-          view: new ol.View({
-            center: center,
-            zoom: zoom
-          })
-        });
-        
-    }
-}
-init_1719653997331_498();
-// $(document).on('silex.resize', function() {
-//     $('#mapdiv_1719653997331_498').empty();
-//     init_1719653997331_498();
-// });
-
-</script>
-</div></div><a data-silex-type="text-element" class="editable-style text-element silex-id-1496168656864-38" data-silex-id="silex-id-1496168656864-38" href="#!page-product-details" style="">
-                <div class="silex-element-content normal">
-                    <div style="text-align: center;">About</div>
-                </div>
-            </a><a data-silex-type="text-element" class="editable-style text-element silex-id-1496168656861-37" data-silex-id="silex-id-1496168656861-37" href="http://www.silexlabs.org" style="">
-                <div class="silex-element-content normal">
-                    <div style="text-align: center;">Blog</div>
-                </div>
-            </a><a data-silex-type="text-element" class="editable-style text-element silex-id-1496168656857-36" data-silex-id="silex-id-1496168656857-36" href="#!page-home-page" style="">
-                <div class="silex-element-content normal">
-                    <div style="text-align: center;">Home</div>
-                </div>
-            </a><div data-silex-type="html-element" class="editable-style html-element silex-component silex-component-share silex-id-1496168764134-41" data-silex-id="silex-id-1496168764134-41" style="">
-                <div class="silex-element-content">
-<ul class="share-buttons" id="id_1719653873606_845">
-  
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com&amp;t=Your%20site%20title" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" data-silex-static="" src="/static/2.7/simplesharingbuttons/simple_icons_black/Facebook.png"></a></li>
-  
-  
-  <li><a href="https://twitter.com/intent/tweet?source=http://yoursite.com&amp;text=Your%20site%20title:%20http://yoursite.com&amp;via=silexlabs" target="_blank" title="Share on Twitter"><img alt="Twitt" data-silex-static="" src="/static/2.7/simplesharingbuttons/simple_icons_black/Twitter.png"></a></li>
-  
-  
-  
-  <li><a href="http://www.tumblr.com/share?v=3&amp;u=http://yoursite.com&amp;t=Your%20site%20title&amp;s=" target="_blank" title="Post to Tumblr"><img alt="Post to Tumblr" data-silex-static="" src="/static/2.7/simplesharingbuttons/simple_icons_black/Tumblr.png"></a></li>
-  
-  
-  <li><a href="http://pinterest.com/pin/create/button/?url=http://yoursite.com&amp;description=Your%20site%20description" target="_blank" title="Pin it"><img alt="Pin it" data-silex-static="" src="/static/2.7/simplesharingbuttons/simple_icons_black/Pinterest.png"></a></li>
-  
-  
-  
-  
-  
-  
-  
-</ul>
-
-<style>#id_1719653873606_845.share-buttons {list-style: none; padding: 0;}#id_1719653873606_845.share-buttons li {display: inline;}#id_1719653873606_845.share-buttons .sr-only {position: absolute; clip: rect(1px, 1px, 1px, 1px); padding: 0; border: 0; height: 1px; width: 1px; overflow: hidden;}</style>
-</div>
-            </div><div data-silex-type="text-element" class="editable-style text-element silex-id-1719652337978-4 page-storia paged-element" data-silex-id="silex-id-1719652337978-4" style=""><div class="silex-element-content normal"><h1>Fastcolors Studio</h1><p>Carlo Fastcolors ha iniziato la sua carriera artistica nel 1993 nella periferia di Milano, in un'epoca in cui reperire informazioni e materiali per la professione di tatuatore era molto difficile. Dopo un periodo iniziale come autodidatta, durante il quale ha utilizzato per un anno intero una macchinetta per tatuaggi costruita con le proprie mani, Carlo ha incontrato Luigi Stopar, un artista rispettato con cui ha collaborato e gettato le basi per la sua crescita professionale.</p><p>Nel 1996, Carlo Ferrè apre il primo Fastcolors Studio, diventato rapidamente un punto di riferimento per gli appassionati di tatuaggi. Successivamente, nel 1999, Carlo si è trasferito a Madrid per lavorare presso Skin Art, un piccolo tattoo shop della città, e successivamente si è unito alla nota Terror Tattoo Crew. Da allora, ha viaggiato per oltre dieci anni tra Europa e Stati Uniti, visitando le mete più celebri del mondo del tatuaggio occidentale.</p><h3>Fastcolors Studio: La Rinascita nel 2017</h3><p>Nel gennaio 2017, Carlo ha riaperto Fastcolors Studio in una nuova sede, portando con sé tutta la conoscenza e l'esperienza accumulata negli anni. Lo studio è specializzato in stile orientale, ma offre una vasta gamma di stili di tatuaggio, realizzati sia da Carlo sia da artisti invitati specializzati nelle tecniche richieste.</p><h3>Collaborazioni di Prestigio</h3><p>Fastcolors Studio è diventato un punto di riferimento per numerosi artisti di fama internazionale. Tra coloro che sono passati dallo studio si annoverano:</p><ul><li>Henry Lewis</li><li>Vale Lovette</li><li>Lara Scotton</li><li>Rudy De Amicis</li><li>Amos Blackink</li><li>Robert Hernandez</li><li>e molti altri</li></ul><h3>Esperienza e Passione</h3><p>Con un background che affonda le radici nel 1993, Fastcolors Studio rappresenta il frutto di anni di esperienza, dedizione e passione per l'arte del tatuaggio. Accogliendo clienti e collaboratori da tutto il mondo, il nostro studio offre un ambiente dove l'arte prende vita sulla pelle, garantendo professionalità e creatività in ogni opera realizzata. Che tu sia alla ricerca di un tatuaggio in stile orientale o di qualsiasi altro stile, Fastcolors Studio è il luogo perfetto per trasformare le tue idee in realtà.</p><h3>Collaborazioni Passate</h3><p>Carlo ha collaborato con diversi studi di tatuaggio rinomati, tra cui:</p><ul><li>Mao y Cathy</li><li>Vittamin Tattoo</li><li>El Rana Tattoo Shop</li><li>So.Cal. Tattoo &amp; Body Piercings</li><li>Everlasting Tattoo (San Francisco)</li><li>Picture Machine (San Francisco)</li><li>Body Graphics (Reno)</li><li>MacDougal Street Tattoo Co. (Manhattan, New York)</li><li>True Blue Tattoo (Queens, New York)</li><li>East Side Ink (Manhattan, New York)</li><li>Hold Fast (Brooklyn, New York)</li><li>DaVinci Tattoo (Wantagh, New York)</li><li>Kattattoomba (A Coruña)</li><li>Studio Adrenaline (Follonica)</li><li>Psycho Tattoo (Roma)</li><li>La Bottega dei Tatuaggi (Ostia, Lido di Roma)</li><li>Quetzal Tattoo (Milano)</li><li>Indelebile Tattoo (Torre del Greco, NA)</li></ul><p>Fastcolors Studio è il frutto di un percorso professionale che ha portato Carlo a viaggiare e a lavorare con i migliori artisti del settore, per offrire oggi un servizio di altissima qualità ai suoi clienti.</p><br></div></div><div data-silex-id="silex-id-1442914737143-3" class="editable-style silex-id-1442914737143-3 text-element" data-silex-type="text-element" style="">
-                <div class="silex-element-content normal"><a href="//www.silex.me/"></a><p><a href="//www.silex.me/" linktype="LinkTypeExternal">Powered by Silex</a></p><a href="https://wearekllr.com/demos/createev/"></a><a href="https://wearekllr.com/demos/createev/"></a>
-                </div>
-            </div></div>
-    </footer></body></html>
+                </div></a></div></div></section></body></html>
